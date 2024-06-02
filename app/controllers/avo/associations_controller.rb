@@ -157,7 +157,7 @@ module Avo
     end
 
     def association_from_params
-      params[:for_attribute] || params[:related_name]
+      (params[:for_attribute] || params[:related_name]).to_sym
     end
   end
 end
